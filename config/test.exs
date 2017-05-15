@@ -16,4 +16,5 @@ config :ocean_ship_logbooks, OceanShipLogbooks.Repo,
   password: "postgres",
   database: "ocean_ship_logbooks_test",
   hostname: "localhost",
-  pool: Ecto.Adapters.SQL.Sandbox
+  pool: Ecto.Adapters.SQL.Sandbox,
+  extensions: [{Geo.PostGIS.Extension, library: Geo}]

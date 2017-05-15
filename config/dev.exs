@@ -40,4 +40,5 @@ config :ocean_ship_logbooks, OceanShipLogbooks.Repo,
   password: "password",
   database: "ocean_ship_logbooks_dev",
   hostname: "localhost",
-  pool_size: 10
+  pool_size: 10,
+  extensions: [{Geo.PostGIS.Extension, library: Geo}]
